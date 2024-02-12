@@ -1,0 +1,1395 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(../photos/hp\ bg.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}   
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(../photos/navbar\ bg.jpg);
+    width: 100%;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    position: fixed;
+}
+.logoo{
+height: 50px;
+        margin: 0;
+        width: 50px;
+}
+
+header img {
+    width: 120px;
+    margin-left: 70px;
+    float: left;
+    border-radius: 50%;
+}
+
+
+.navigation .uhpsignin {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 7px;
+    width: 100px;
+    height: 40px;
+    outline: none;
+    transition: 0.3s ease;
+    background: transparent;
+    margin-left: 20px;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+.navigation .uhpsignin:hover{
+    border: 1px solid #fff;
+    background: rgba(20, 20, 20,.8);
+    
+}
+.navigation .uhpsignup{
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 7px;
+    width: 100px;
+    height: 40px;
+    outline: none;
+    transition: 0.3s ease;
+    background: transparent;
+    margin-left: 20px;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+    font-size: 1.1em;
+    text-decoration: none;
+    
+}
+.navigation .uhpsignup:hover{
+    border: 1px solid #fff;
+    background: rgba(20, 20, 20,.8);
+    
+}
+
+.midder{
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+.midder h1{
+    color: white;
+    font-size: 7vh;
+    margin-top: 30%;
+    margin-bottom: 30px;
+}
+.midder h2{
+    font-size: 54px;
+    margin-top: 30px;
+
+    text-decoration:rgb(116, 70, 38);
+}
+
+.signinform {
+    display: none;
+    margin-top: 90px;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    position: relative;
+    width: 400px;
+    
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    background: transparent;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .3s ease, height .2s ease;
+}
+
+.signinform.active-popup{
+    transform: scale(1);
+    display: flex;
+}
+
+.signinform .iconclose{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 45px;
+    width: 45px;
+    background: rgba(20, 20, 20,.8);
+    font-size: 100%;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.signinform .form-box {
+    width: 100%;
+    padding: 40px;
+}
+.form-box h2 { 
+    text-align: center;
+    font-size: 2em;
+    color: #ccc;
+}
+
+.form-input {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    color: #ccc;
+    border-bottom: 2px solid #ccc;
+    margin: 25px 0;
+    
+}
+
+.form-input select{
+    width: 90%;
+    margin: 14px 0;
+    font-size: 1em;
+    font-weight: 500;
+    background: transparent;
+    color: #ccc;
+    border: none;
+    
+ }
+ .form-input select option{
+    color: black;
+    
+}
+
+.form-input label {
+    position: absolute;
+    color: #ccc;
+    left: 5px;
+    top: -15px;
+    font-size: 1em;
+    font-weight: 500;
+    pointer-events: none;
+}
+
+.form-input input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 500;
+    color: #ccc;
+    padding: 0 35px 0 5px;
+}
+
+.form-input .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    line-height: 57px;
+    color: #ccc;
+}
+
+
+
+.login-button{
+    width: 100%;
+    height: 45px;
+    background-color: black;
+    border: none;
+    color: #ccc;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+}
+.login-button:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+.signup-link{
+    font-size: .9em;
+    text-align: center;
+    font-weight: 500;
+    color: #ccc;
+    margin: 25px 0 10px;
+
+}
+.signup-link p a{
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 500;
+}
+.signup-link p a:hover {
+    text-decoration: underline;
+}
+
+/* sign up */
+.error {
+    background: #F2DEDE;
+    color: #A94442;
+    padding: 10px;
+    text-align: center;
+    width: 95%;
+    border-radius: 5px;
+    margin: 18px auto;
+ }
+ .success {
+    background: #D4EDDA;
+    color: #40754C;
+    padding: 10px;
+    text-align: center;
+    width: 95%;
+    border-radius: 5px;
+    margin: 18px auto;
+ }
+
+.signupform {
+    margin-top: 130px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    position: relative;
+    width: 400px;
+    
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    background: transparent;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .3s ease, height .2s ease;
+}
+
+.signupform.active-popup{
+    transform: scale(1);
+    display: flex;
+}
+
+.signupform .iconcloseup{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 45px;
+    width: 45px;
+    background: rgba(20, 20, 20,.8);
+    font-size: 100%;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.signupform .form-box {
+    width: 100%;
+    padding: 40px;
+} 
+
+.signup-button{
+    width: 100%;
+    height: 45px;
+    background-color: black;
+    border: none;
+    color: #ccc;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+}
+.signup-button:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+.signup-header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signin-link{
+    font-size: .9em;
+    text-align: center;
+    font-weight: 500;
+    color: #ccc;
+    margin: 25px 0 10px;
+
+}
+
+.signin-link p a{
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 500;
+}
+
+.signin-link p a:hover {
+    text-decoration: underline;
+}
+
+
+.footer{
+    top: 130%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color: rgb(78, 64, 64);
+    background: rgba(20, 20, 20,.8);
+    height: auto;
+}
+
+.footer p {
+    font-size: 15px;
+    padding-bottom: 7px;
+}
+
+.footer .Visit h2{
+    color: #fff;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+}
+.footer .Visit a{
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+}
+
+.footer ul li{
+    margin-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    display: inline-block;
+    position: relative;
+    justify-content: space-between;
+}
+
+.footer ul li a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+
+/*-----media----*/
+@media (max-width: 425px){
+    header{
+        height: 10vh;
+        padding: 5px 10px;
+    }
+    
+    .navigation a {
+        font-size: 12px;
+        margin-left: 15px;
+    }
+
+    .logoo{
+        height: 25px;
+        margin: 0;
+        width: 25px;
+    }
+    
+    header img {
+        margin-left: 5px;
+        float: left;
+    }
+    
+    .navigation .uhpsignin {
+        padding: 1px;
+        height: 30px;
+        width: 50px;
+        margin-left: 5px;
+        font-size: 12px;
+    }
+    
+    .navigation .uhpsignup{
+        padding: 1px;
+        height: 30px;
+        width: 50px;
+        margin-left: 5px;
+        font-size: 12px;
+    }
+    
+    .midder{
+        top: 30%;
+    
+    }
+    .midder h1{
+        font-size: 16px;
+        margin-top: 30%;
+        margin-bottom: 30px;
+    }
+    .midder h2{
+        font-size: 20px;
+        margin-top: 30px;
+    }
+    
+    .signinform {
+        margin-top: -160px;
+        height: auto;
+        width: 200px;
+    }
+    
+    .signinform .iconclose{
+        height: 30px;
+        width: 30px;
+        font-size: 75%;
+        border-bottom-left-radius: 15px;
+        
+    }
+    
+    .signinform .form-box {
+        padding: 20px;
+    }
+    .form-box h2 { 
+        font-size: 20px;
+    }
+    
+    .form-input {
+        height: 30px;
+        border-bottom: 2px solid #ccc;
+        margin: 15px 0;
+    }
+    
+    .form-input select{
+        width: 88%;
+        margin: 10px 0;
+        font-size: 12px;
+     }
+    
+    .form-input label {
+        left: 5px;
+        top: -10px;
+        font-size: 12px;
+    }
+    
+    .form-input input {
+        width: 105%;
+        height: 100%;
+        font-size: 12px;
+        padding: 0 35px 0 5px;
+    }
+    
+    .form-input .icon {
+        right: 2px;
+        font-size: 12px;
+        line-height: 35px;
+    }
+    
+    
+    
+    .login-button{
+        width: 100%;
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    
+    .signup-link{
+        font-size: 10px;
+        margin: 10px 0 2px;
+    }
+    
+    
+    /* sign up */
+    .error {
+        padding: 2px;
+        font-size: 10px;
+        width: 85%;
+        border-radius: 5px;
+        margin: 10px auto;
+     }
+     .success {
+        font-size: 10px;
+        padding: 2px;
+        
+        width: 85%;
+        border-radius: 5px;
+        margin: 10px auto;
+     }
+    
+    .signupform {
+        margin-top: -5px;
+        height: auto;
+        width: 200px;
+    }
+    
+    .signupform .iconcloseup{
+        height: 30px;
+        width: 30px;
+        font-size: 75%;
+        border-bottom-left-radius: 15px;
+        
+    }
+    
+    .signupform .form-box {
+        padding: 20px;
+    }
+    
+    .signup-button{
+        width: 100%;
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    
+    .signin-link{
+        font-size: 10px;
+        margin: 10px 0 2px;
+    }
+    
+
+    .footer{
+        top: 90%;
+        width: 100%;
+        height: auto;
+    }
+
+.footer p {
+    font-size: 10px;
+    padding-bottom: 5px;
+}
+
+.footer .Visit h2{
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+.footer .Visit a{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+}
+
+.footer ul li{
+    margin-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 12px;
+    
+}
+
+}
+@media (min-width: 425px){
+    header{
+        height: 10vh;
+        padding: 10px 30px;
+    }
+    
+    .navigation a {
+        font-size: 12px;
+        margin-left: 20px;
+    }
+
+    .logoo{
+        height: 25px;
+        margin: 0;
+        width: 25px;
+    }
+    
+    header img {
+        margin-left: 5px;
+        float: left;
+    }
+    
+    .navigation .uhpsignin {
+        padding: 2px;
+        height: 30px;
+        width: 70px;
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    
+    .navigation .uhpsignup{
+        padding: 2px;
+        height: 30px;
+        width: 70px;
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    
+    .midder{
+        top: 30%;
+    
+    }
+    .midder h1{
+        font-size: 18px;
+        margin-top: 30%;
+        margin-bottom: 30px;
+    }
+    .midder h2{
+        font-size: 21px;
+        margin-top: 30px;
+    }
+    
+    .signinform {
+        margin-top: -105px;
+        height: auto;
+        width: 200px;
+    }
+    
+    .signinform .iconclose{
+        height: 30px;
+        width: 30px;
+        font-size: 75%;
+        border-bottom-left-radius: 15px;
+        
+    }
+    
+    .signinform .form-box {
+        padding: 20px;
+    }
+    .form-box h2 { 
+        font-size: 20px;
+    }
+    
+    .form-input {
+        height: 30px;
+        border-bottom: 2px solid #ccc;
+        margin: 15px 0;
+    }
+    
+    .form-input select{
+        width: 88%;
+        margin: 10px 0;
+        font-size: 12px;
+     }
+    
+    .form-input label {
+        left: 5px;
+        top: -10px;
+        font-size: 12px;
+    }
+    
+    .form-input input {
+        width: 105%;
+        height: 100%;
+        font-size: 12px;
+        padding: 0 28px 0 1px;
+    }
+    
+    .form-input .icon {
+        right: 2px;
+        font-size: 12px;
+        line-height: 35px;
+    }
+    
+    
+    .login-button{
+        
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    
+    .signup-link{
+        font-size: 10px;
+        margin: 10px 0 2px;
+    }
+    
+    
+    /* sign up */
+    .error {
+        padding: 2px;
+        font-size: 10px;
+        width: 85%;
+        border-radius: 5px;
+        margin: 10px auto;
+     }
+     .success {
+        font-size: 10px;
+        padding: 2px;
+        
+        width: 85%;
+        border-radius: 5px;
+        margin: 10px auto;
+     }
+    
+    .signupform {
+        margin-top: -5px;
+        
+        width: 200px;
+    }
+    
+    .signupform .iconcloseup{
+        height: 30px;
+        width: 30px;
+        font-size: 75%;
+        border-bottom-left-radius: 15px;
+        
+    }
+    
+    .signupform .form-box {
+        padding: 20px;
+    }
+    
+    .signup-button{
+       
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    
+    .signin-link{
+        font-size: 10px;
+        margin: 10px 0 2px;
+    }
+    
+
+    .footer{
+        top: 90%;
+        width: 100%;
+        height: auto;
+    }
+
+.footer p {
+    font-size: 10px;
+    padding-bottom: 5px;
+}
+
+.footer .Visit h2{
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+.footer .Visit a{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+}
+
+.footer ul li{
+    margin-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 12px;
+    
+}
+
+}
+@media (min-width: 768px){
+    header{
+        
+        padding: 15px 50px;
+    }
+    
+    .navigation a {
+        font-size: 13px;
+        margin-left: 30px;
+    }
+
+    .logoo{
+        height: 35px;
+        margin: 0;
+        width: 35px;
+    }
+    
+    header img {
+        margin-left: 8px;
+        float: left;
+    }
+    
+    .navigation .uhpsignin {
+        padding: px;
+        height: 33px;
+        width: 75px;
+        margin-left: 15px;
+        font-size: 13px;
+    }
+    
+    .navigation .uhpsignup{
+        padding: 2px;
+        height: 33px;
+        width: 75px;
+        margin-left: 15px;
+        font-size: 13px;
+    }
+    
+    .midder{
+        top: 30%;
+    
+    }
+    .midder h1{
+        font-size: 20px;
+        margin-top: 30%;
+        margin-bottom: 30px;
+    }
+    .midder h2{
+        font-size: 31px;
+        margin-top: 30px;
+    }
+    
+    .signinform {
+        margin-top: -75px;
+        height: auto;
+        width: 250px;
+    }
+    
+    .signinform .iconclose{
+        height: 35px;
+        width: 35px;
+        font-size: 80%;
+        border-bottom-left-radius: 15px;
+        
+    }
+    
+    .signinform .form-box {
+        padding: 25px;
+    }
+    .form-box h2 { 
+        font-size: 21px;
+    }
+    
+    .form-input {
+        height: 32px;
+        border-bottom: 2px solid #ccc;
+        margin: 15px 0;
+    }
+    
+    .form-input select{
+        width: 88%;
+        margin: 12px 0;
+        font-size: 13px;
+     }
+    
+    .form-input label {
+        left: 5px;
+        top: -12px;
+        font-size: 13px;
+    }
+    
+    .form-input input {
+        width: 102%;
+       
+        font-size: 13px;
+        padding: 0 30px 0 2px;
+    }
+    
+    .form-input .icon {
+        right: 2px;
+        font-size: 13px;
+        line-height: 40px;
+    }
+    
+    
+    
+    .login-button{
+        
+        height: 34px;
+        font-size: 13px;
+    }
+    
+    
+    .signup-link{
+        font-size: 11px;
+        margin: 15px 0 2px;
+    }
+    
+    
+    /* sign up */
+    .error {
+        padding: 4px;
+        font-size: 11px;
+        width: 88%;
+        border-radius: 5px;
+        margin: 13px auto;
+     }
+     .success {
+        font-size: 11px;
+        padding: 2px;
+        
+        width: 85%;
+        border-radius: 5px;
+        margin: 10px auto;
+     }
+    
+    .signupform {
+        margin-top: 30px;
+        
+        width: 250px;
+    }
+    
+    .signupform .iconcloseup{
+        height: 35px;
+        width: 35px;
+        font-size: 80%;
+        border-bottom-left-radius: 15px;
+        
+    }
+    
+    .signupform .form-box {
+        padding: 25px;
+    }
+    
+    .signup-button{
+        height: 34px;
+        font-size: 13px;
+    }
+    
+    
+    .signin-link{
+        font-size: 11px;
+        margin: 15px 0 5px;
+    }
+    
+
+    .footer{
+        top: 95%;
+        
+    }
+
+.footer p {
+    font-size: 11px;
+    padding-bottom: 5px;
+}
+
+.footer .Visit h2{
+    font-size: 21px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+.footer .Visit a{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+}
+
+.footer ul li{
+    margin-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 13px;
+    
+}
+
+}
+@media (min-width: 1024px){
+    header{
+        padding: 13px 80px;
+    }
+    
+    .navigation a {
+        font-size: 14px;
+        margin-left: 35px;
+    }
+
+    .logoo{
+        height: 45px;
+        margin: 0;
+        width: 45px;
+    }
+    
+    header img {
+        margin-left: 50px;
+        float: left;
+    }
+    
+    .navigation .uhpsignin {
+        padding: 5px;
+        height: 37px;
+        width: 88px;
+        margin-left: 18px;
+        font-size: 14px;
+    }
+    
+    .navigation .uhpsignup{
+        padding: 5px;
+        height: 33px;
+        width: 88px;
+        margin-left: 18px;
+        font-size: 14px;
+    }
+    
+    .midder{
+        top: 25%;
+    
+    }
+    .midder h1{
+        font-size: 24px;
+        margin-top: 30%;
+        margin-bottom: 30px;
+    }
+    .midder h2{
+        font-size: 42px;
+        margin-top: 30px;
+    }
+    
+    .signinform {
+        margin-top: -75px;
+        height: auto;
+        width: 300px;
+    }
+    
+    .signinform .iconclose{
+        height: 40px;
+        width: 40x;
+        font-size: 90%;
+        border-bottom-left-radius: 15px;
+        
+    }
+    
+    .signinform .form-box {
+        padding: 35px;
+    }
+    .form-box h2 { 
+        font-size: 22px;
+    }
+    
+    .form-input {
+        height: 36px;
+        border-bottom: 2px solid #ccc;
+        margin: 20px 0;
+    }
+    
+    .form-input select{
+        width: 89%;
+        margin: 13px 0;
+        font-size: 13px;
+     }
+    
+    .form-input label {
+        left: 5px;
+        top: -13px;
+        font-size: 14px;
+    }
+    
+    .form-input input {
+        width: 101%;
+        
+        font-size: 14px;
+        padding: 0 33px 0 3px;
+    }
+    
+    .form-input .icon {
+        right: 5px;
+        font-size: 14px;
+        line-height: 49px;
+    }
+    
+    
+    
+    .login-button{
+        
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    
+    .signup-link{
+        font-size: 12px;
+        margin: 20px 0 6px;
+    }
+    
+    
+    /* sign up */
+    .error {
+        padding: 8px;
+        font-size: 12px;
+        width: 82%;
+        border-radius: 5px;
+        margin: 15px auto;
+     }
+     .success {
+        padding: 8px;
+        font-size: 12px;
+        width: 82%;
+        border-radius: 5px;
+        margin: 15px auto;
+     }
+    
+    .signupform {
+        margin-top: 120px;
+        width: 300px;
+    }
+    
+    .signupform .iconcloseup{
+        height: 40px;
+        width: 40x;
+        font-size: 90%;
+        border-bottom-left-radius: 15px;
+        
+    }
+    
+    .signupform .form-box {
+        padding: 35px;
+    }
+    
+    .signup-button{
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    
+    .signin-link{
+        font-size: 12px;
+        margin: 20px 0 6px;
+    }
+    
+
+    .footer{
+        top: 108%;
+        
+    }
+
+.footer p {
+    font-size: 12px;
+    padding-bottom: 6px;
+}
+
+.footer .Visit h2{
+    font-size: 22px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+}
+.footer .Visit a{
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 3px;
+}
+
+.footer ul li{
+    margin-right: 18px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 14px;
+    
+}
+}
+@media (min-width: 1280px){
+header{
+    padding: 20px 100px;
+}
+.logoo{
+height: 50px;
+        margin: 0;
+        width: 50px;
+}
+.navigation a {
+    font-size: 1.1em;
+    margin-left: 40px;
+}
+header img {
+    width: 120px;
+    margin-left: 70px;
+}
+
+
+.navigation .uhpsignin {
+    padding: 7px;
+    height: 40px;
+    margin-left: 20px;
+    font-size: 1.1em;
+}
+
+.navigation .uhpsignup{
+    padding: 7px;
+    height: 40px;
+    margin-left: 20px;
+    font-size: 1.1em;
+}
+
+.midder{
+    top: 25%;
+}
+.midder h1{
+    font-size: 38px;
+    margin-top: 30%;
+    margin-bottom: 30px;
+}
+.midder h2{
+    font-size: 52px;
+    margin-top: 30px;
+
+}
+
+.signinform {
+    margin-top: 90px;
+    width: 400px;
+}
+
+
+.signinform .iconclose{
+    
+    height: 45px;
+    width: 45px;
+    font-size: 100%;
+    color: #ccc;
+
+    border-bottom-left-radius: 20px;
+}
+
+.signinform .form-box {
+    padding: 40px;
+}
+.form-box h2 {  
+    font-size: 2em;
+}
+
+.form-input {
+    height: 45px;
+    color: #ccc;
+    border-bottom: 2px solid #ccc;
+    margin: 25px 0;
+    
+}
+
+.form-input select{
+    width: 90%;
+    margin: 14px 0;
+    font-size: 1em;
+ }
+
+.form-input label {
+    
+    left: 5px;
+    top: -15px;
+    font-size: 1em;
+}
+
+.form-input input {
+    width: 100%;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+}
+
+.form-input .icon {
+    right: 8px;
+    font-size: 1.2em;
+    line-height: 57px;
+}
+
+.login-button{
+    width: 100%;
+    height: 45px;
+    font-size: 1em;
+}
+
+.signup-link{
+    font-size: .9em;
+    margin: 25px 0 10px;
+}
+
+/* sign up */
+.error {
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    margin: 18px auto;
+ }
+ .success {
+    
+    padding: 10px;
+    
+    width: 95%;
+    border-radius: 5px;
+    margin: 18px auto;
+ }
+
+.signupform {
+    margin-top: 130px;
+    width: 400px;
+}
+
+.signupform .iconcloseup{
+    height: 45px;
+    width: 45px;
+    font-size: 100%;
+}
+
+.signupform .form-box {
+    padding: 40px;
+}
+
+.signup-button{
+    height: 45px;
+    font-size: 1em;
+}
+
+.signin-link{
+    font-size: .9em;
+    margin: 25px 0 10px;
+}
+
+.footer{
+    top: 135%;
+}
+
+.footer p {
+    font-size: 15px;
+    padding-bottom: 7px;
+}
+
+.footer .Visit h2{
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+}
+.footer .Visit a{
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+}
+
+.footer ul li{
+    margin-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+
+}
+
+@media (max-height: 600px){
+    .signupform {
+        margin-top: 80px;
+    }
+    .footer{
+        top: 113%;
+    }
+}
+
